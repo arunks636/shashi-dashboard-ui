@@ -24,7 +24,6 @@ const App = () =>{
           <>
             <GlobalStyles />
             <div className="App">
-              <div className="text-center">
                 <Navbar themeToggler={themeToggler} />
                 <BrowserRouter>
                   <Routes>
@@ -33,7 +32,6 @@ const App = () =>{
                     <Route path="/newProduct" Component={NewProduct}></Route>
                   </Routes>
                 </BrowserRouter>
-              </div>
             </div>
           </>
         </ThemeProvider>

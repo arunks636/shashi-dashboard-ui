@@ -52,9 +52,9 @@ export default function Navbar({themeToggler}: any){
     // const themeMode = theme === 'light' ? lightTheme : darkTheme;
     return (
         <Nav>
-            <Container>
-                <Row className='justify-content-between align-items-center'>
-                    <Col>
+            <div className="container">
+                <div className='justify-content-between align-items-center row'>
+                    <div className="col">
                         <ul className='d-flex m-0 justify-content-center justify-content-sm-start'>
                             <li>
                                 <a href="/">Dashboard</a>
@@ -63,14 +63,14 @@ export default function Navbar({themeToggler}: any){
                                 <a href="/productTable">Smartphones</a>
                             </li>
                         </ul>
-                    </Col>
+                    </div>
 
-                    <Col className='text-center text-sm-end'>
+                    <div className='col text-center text-sm-end'>
                         <button className='light' onClick={themeToggler}>Light</button>
                         <button className="dark" onClick={themeToggler}>Dark</button>
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </Nav>
     )
 };

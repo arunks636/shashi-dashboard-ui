@@ -1,11 +1,9 @@
 import React , { useEffect, useState } from "react";
-
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import styled from 'styled-components';
 import HeaderTitle from '../Components/HeaderTitle';
+import FormUi from '../Components/Form';
 import { API, Smartphone } from './api'; 
+
 
 const CreateNewBtn = styled.button`
     background-color: #000; 
@@ -58,7 +56,7 @@ export default function ProductTable(){
     return (
         <>
         <HeaderTitle name="Smartphones"/>
-        <Container>
+        <div className="container">
             <div className='d-flex justify-content-end'>
                 <a href='/newProduct'><CreateNewBtn>Create new</CreateNewBtn></a>
             </div>
@@ -80,7 +78,9 @@ export default function ProductTable(){
                     })}
                 </tbody>
             </ProductTableStyle>
-        </Container>
+
+            <FormUi/>
+        </div>
         </>
     )
 }
